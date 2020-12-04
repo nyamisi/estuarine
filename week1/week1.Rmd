@@ -1,6 +1,8 @@
 ---
 title: "Estuarine and Wetland: week one exercise"
 output: webex::webex_default
+author: "Nyamisi Peter"
+date: "12/4/2020"
 ---
 
 ```{r setup, include = FALSE}
