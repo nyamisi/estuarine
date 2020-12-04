@@ -1,0 +1,44 @@
+---
+title: "Estuarine and Wetland: week one exercise"
+output: webex::webex_default
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!requireNamespace("webex")) {
+  stop("You must have the 'webex' package installed to knit HTML from this template.\n   devtools::install_github(\"psyteachr/webex\")")
+} else {
+  library("webex")
+}
+```
+
+# Instructions
+> Please note that the appearance of the `text box` and `pull-down` changes from red to blue colours when you enter the correct answer. 
+
+# WEEK ONE
+
+1. Explain what do you understand by the word *Estuarine* `r fitb("Estuarine is.... ")`
+
+Create fill-in-the-blank questions using `fitb()`, providing the answer as the first argument.
+
+- 2 + 2 is `r fitb("4")`
+
+You can also create these questions dynamically, using variables from your R session.
+
+```{r echo = FALSE}
+x <- sample(2:8, 1)
+```
+
+- The square root of `r x^2` is: `r fitb(x)`
+
+- the sum of `r c(2,5,8,3)` is `r fitb(sum(c(2,5,8,3)))`
+
+- What is the word for an area where freshwater meet salt water? `r fitb("Estuarine", ignore_case = TRUE)`
+
+
+- What is the largest estuarine system along the coastal water of Tanzania? `r mcq(c("Ruvuma", "Ruvu", answer = "Rufiji"))`
+
+- Of `r mcq(c("Coral", "Seagrass", answer = "Mangrove"))` is the habitat found only in the estuarine?
+
+- Can estuarine have salinity above 34 psu? `r torf(FALSE)`
+

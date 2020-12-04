@@ -1,0 +1,67 @@
+---
+title: "Courses Synopsis"
+author: "Nyamisi Peter"
+date: "12/4/2020"
+output: 
+      bookdown::html_document2
+bibliography: ref_estuarine.bib
+csl-style: vancouver.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, comment = "")
+```
+
+
+```{r}
+require(tidyverse)
+require(kableExtra)
+require(patchwork)
+```
+
+# Course description:
+This course enables student to understand the ecological and socio-economic aspects of estuaries and wetlands. The course presents the importance of estuaries wetlands and in ecosystem to support natural population.
+
+
+# Course objective: 
+This course aims at exposing student to Estuarine and wetland environments with their accompanying physical, chemical and biological characteristics. 
+
+# Learning outcomes:
+Upon completion of this course, student will be able to: 
+
+i.	Demonstrate the knowledge on physical, chemical and biological characteristics of estuaries and wetlands.
+ii.	Describe the ecological and economical benefits of estuaries and wetlands.
+iii.	Consolidate the basic knowledge of biological and ecological principles on estuaries and wetlands to enhance sustainable utilization and proper management.
+iv.	Appropriate utilize and manage estuaries and wetlands.
+
+
+
+```{r}
+estuarine = readxl::read_excel("../table_courses.xlsx", sheet = 1)
+
+estuarine %>%
+  kable(caption = "Mode of Delivery for Estuarine and Wetland Course-BI 304", align = "c") %>%
+  column_spec(column = 1:4, width = "2.5cm") %>% 
+  add_header_above(c("", "Percentage", "Teaching Hours" = 2))
+  
+```
+
+
+## Mode of assessment
+The course has a total credit of **7.5**. This course will be assessed based *Course work* and *final examination*. The course, which include two tests,assignment, quizzes and practicals contributes 40% of the total marks. The remaining 60% of comes from the Final University Examination. 
+
+## Course content: 
+Estuaries: Definition and classification. Wetlands: Classification and distribution of ecosystems.  Physical and chemical features of estuarine and wetlands waters. Estuarine shores; sediment source, types, and transport.  Sources of flow, flow volume, flushing time, tidal flow, landscape and catchment circulation. The salt water wedge and salinity adaptations. Land-water interaction: riparian and hyporheiz cones. Estuarine and wetland habitats: mudflats, channels, and floodplain, streams (stream ecosystem theory), marshes, bogs, swamps and mangroves. Estuarine and wetlands communities, life types and biological processes. Uses of estuaries and wetlands– their role and importance in fisheries, waste disposal, transportation, and port facilities. Human impacts on estuaries and wetlands. Management of estuaries and wetlands.
+
+
+## Books and Reading materials
+The course will extract relevant information on estuarine and wetland from several reference books and other reports. For instance, The first book we will use during the course is titled **Estuarine biology** authored by @barnes. This booklet attempts to view the biology of estuarine organisms in the context of their environment as a whole. It also endeavours to introduce to a wide audience some of the more recent advances in our knowledge and understanding of estuaries. The author, at least, will be more than satisfied if the booklet succeeds in providing a general framework against which some of the detailed studies on estuarine species can be considered; in stimulating interest in some of the as yet unresolved questions; and in conveying some of the pleasure and satisfaction to be derived from studying our estuaries. Should my botanical colleagues consider that too great an emphasis has been placed upon the fauna, I can only admit that were I a botanist I would probably agree with them. To give a complete picture of the many-faceted biology of estuaries in a small booklet is clearly impossible. Rather than write one short paragraph on each facet, I have been selective, choosing what to me are the most important and interesting of recent developments, whilst still endeavouring to tell a unified story. The suggested material for further reading will hopefully permit the reader to delve into fields which pressure of space has forced me to neglect. To all those friends and colleagues who were inveigled into reading all or part of this booklet in draft, and especially to my wife, may I offer my most sincere gratitude; through their efforts the booklet has been immeasurably improved.
+
+The second book is titled **East African ecosystems and their conservation** edited by @mcclanahan. The book covers the estuarine system in East Africa, as one of the most diverse and interesting tropical area on the planet. It is home not only to the last great megafaunal assemblage, but also to human populations with the highest growth rates. This book draws on the expertise of leading ecologists, each intimately familiar with a particular set of East African ecosystems, to provide the first in-depth and integrated account of the ecology, management, threats, and conservation of these diverse ecosystems. Summarizing the tremendous wealth of scientific research that has come out of East Africa in the last few decades, each chapter analyzes a given ecosystem type, taking the reader through the basics of its ecology, its historical use (and misuse) by humans, and its prospects for conservation. Throughout the book, linkages and similarities among ecosystems are emphasized, the historical and contemporary role of humans in shaping these ecosystems is considered, fundamental principles of ecology are considered, and interesting case studies are highlighted. Students and researchers in ecology, conservation biology, and environmental sciences will find this book useful in their work.
+
+The third book is **River Quality: Dynamics and Restoration ** edited by @dunnette1997river. This book answers some of the crucial question through a series of articles and case studies written by some of the field's leading researchers and practitioners. The first part of the book covers the physical, chemical, and biological dynamics of a river system. The second part describes monitoring programs and remedial measures used to restore river systems back to healthy and functional states. The Willamette River in Oregon and the Vistula River in Poland are used to illustrate the dynamic and restoration processes. Each river is in a different stage of restoration and is subjected to different degrees of stress from agriculture, industry, and urbanization. The Willamette is an internationally cited example of a restored river, while the Vistula is a river that has just recently begun the restoration process. Contrasts and comparisons of the two river systems enable readers to learn the limitations of restoration processes and what is involved in the different stages of restoration.
+
+The fourth book is **Estuaries: A Lifeline of Ecosystem Services in the Western Indian Ocean** edited by @diop2016estuaries . This book provides recent environmental, ecological and hydrodynamic information for the major estuaries and the coastal marine systems of the Western Indian Ocean Region. It covers various functions and values of the region’s estuarine ecosystems and their respective habitats, including the land/ocean interactions that define and impact ecosystem services. The Western Indian Ocean region covered by this volume consists of the continental coastal states of Kenya, Mozambique, South Africa and Tanzania and the island states of Madagascar, Mauritius, Seychelles and Comoros.
+
+
+# References
